@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table And Form</title>
+</head>
+<body>
+    
+    <header>
+        <h1>UA IT Solutions</h1>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Products Offered</h2>
+            <h3>Velasco, John Russel E.</h3>
+
+            <table border="5">
+                <thead>
+                    <tr>
+                        <th>Package</th>
+                        <th>Price</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+
+                <TBody>
+
+                    <tr>
+                        <td>Basic</td>
+                        <td>₱500.00</td>
+                        <td>Package includes a fully functional website with desired specificaions</td>
+                    </tr>
+                    <tr>
+                         <td>Premium</td>
+                        <td>₱1000.00</td>
+                        <td>Enjoy all the benefits of tha basic package and also includes site support and maintenance</td>
+                    </tr>
+                    
+                </TBody>
+
+                <tfoot>
+                    <tr>
+                        <th colspan="3">Additional features after initial project is inclusive of charges</th>
+                    </tr>
+                </tfoot>
+
+            </table>
+        </section>
+    </main>
+            <section>
+            <h2>Contact Form</h2>
+
+            <form>
+                <label for="full_name">First Name:</label> <br>
+                
+                <input type="text" id="full_name" name="full_name" required autocomplete><br>
+                <label for="last_name">Last Name:</label><br>
+                
+                <input type="text" id="last_name" name="last_name" required autocomplete><br>
+                <label for="email">Email:</label><br>
+                
+                <input type="text" id="email" name="email" required autocomplete><br>
+                <label for="contact">Contact Number:</label><br>
+                
+                <input type="text" id="contact" name="contact" required autocomplete><br>
+
+                <br>
+
+                <label for="Service Type">Service Type:</label><br>
+                <select name="gender" id="gender">
+                    <option value="">Front End Programming</option>
+                    <option value="">Back End Programming</option>
+                    <option value="">Full Stack</option>
+                </select>
+
+                <br>
+
+                <tr id="preferred" name="preferred"></tr>
+                <label for="preferred">Prefered Contact:</label> <br>
+                <input type="checkbox" id="Email" name="Email"><label for="email">Email</label> <br>
+                <input type="checkbox" id="phone" name="phone">Phone</label>
+
+                <tr type="text" id="pack" name="pack"></tr><br>
+                <label for="pack">Package:</label> <br>
+                <input type="radio" id="bas" name="bas"><label for="bas">Basic</label> <br>
+                <input type="radio" id="prim" name="prim">Premium</label> <br>
+                
+ 
+                <br>
+
+                <label for="notes">Message</label><br>
+                <textarea name="notes" id="notes" rows="5"></textarea>
+
+                <br>
+
+                <button type="submit">Send Inquiry</button>
+                <br>
+                <button type="reset">Reset</button>
+
+            </form>
+        </section>
+
+</body>
+</html>
