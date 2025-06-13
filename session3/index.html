@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table And Form</title>
+</head>
+<body>
+    
+    <header>
+        <h1>HTML Table And Form</h1>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>HTML Entities</h2>
+            <p>Reserved Characters In HTML (e.g &lt; or &gt; Characters that can mix up the HTML code.)</p>
+
+            <table border="5">
+                <thead>
+                    <tr>
+                        <th>Entity</th>
+                        <th colspan="2">Description</th>
+                    </tr>
+                </thead>
+
+                <TBody>
+
+                    <tr>
+                        <td>&lt;</td>
+                        <td>lt</td>
+                        <td>Less Than</td>
+                    </tr>
+                    <tr>
+                         <td>&gt;</td>
+                        <td>gt</td>
+                        <td>greater Than</td>
+                    </tr>
+                    <tr>
+                         <td>&quot;</td>
+                        <td>quot</td>
+                        <td>Double Quotation Mark</td>
+                    </tr>
+                    
+                </TBody>
+
+                <tfoot>
+                    <tr>
+                        <th colspan="3">List of HTML Entities</th>
+                    </tr>
+                </tfoot>
+
+            </table>
+        </section>
+    </main>
+            <section>
+            <h2>HTML Form</h2>
+            <p>Input elements that make up a form.</p>
+
+            <form action="https://www.google.com">
+                <label for="full_name">Full name</label><br>
+                <input type="text" id="full_name" name="full_name" required autocomplete autocapitalize="">
+
+                <br>
+
+                <label for="date">Date of Birth</label><br>
+                <input type="date" id="date" name="date">
+
+                <br>
+
+                <label for="age">Age</label><br>
+                <input type="number" id="age" name="age">
+
+                <br>
+
+                <label for="gender">Gender<br>
+                <select name="gender" id="gender">
+                    <option value="">--- Select ---</option>
+                    <option value="">Male</option>
+                    <option value="">Tama</option>
+                    <option value="">Others</option>
+                </select>
+
+                <br>
+
+                <label for="notes">Notes</label><br>
+                <textarea name="notes" id="notes" rows="5"></textarea>
+
+                <br>
+
+                <button type="submit">DragonFly</button>
+                br
+                <button type="reset">racoon</button>
+
+            </form>
+        </section>
+
+</body>
+</html>
