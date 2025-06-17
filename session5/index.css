@@ -1,0 +1,97 @@
+/* UMIVERDSL SELECTOR */
+/* 
+SYNTAX:
+
+selector{
+    property: value;
+}
+
+/*  */
+
+*{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+body{
+    background-color: rgba(251, 248, 253, 0.767);
+}
+
+nav{
+    background-color:rgb(117, 106, 0);
+    padding: 20px;
+}
+
+div{
+    float: right;
+}
+
+/* Element or type selector */
+
+h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* /* Landing section  */
+
+section{
+    height: 100vh;
+    text-align: center;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+/* ID Selector */
+
+#ua-motto{
+    letter-spacing: 8px;
+}
+
+h3{
+    letter-spacing: 25px;
+}
+
+/* class selector */
+
+.modules{
+    letter-spacing: 5px;
+}
+
+/* adjacent sibling selector */
+/* selector + selector */
+
+h3 + img{
+    height: 300px;
+    width: auto;
+    border-radius: 80px;
+}
+
+ol{
+    list-style-type: none;
+}
+
+.offering-item{
+    text-transform: uppercase;
+}
+
+/* descendant selector  */
+/* selector (space) selector */
+
+#bootcamp-learning-list li{
+    color: blanchedalmond;
+}
+
+/* general sibling select */
+/* selector ~ selector */
+
+h2 ~ a{
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}

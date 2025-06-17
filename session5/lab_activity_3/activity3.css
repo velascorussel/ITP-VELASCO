@@ -1,0 +1,30 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+#one{
+    color: red;
+}
+#two{
+    color: yellow;
+}
+
+#three{
+    color: green;
+}
+
+h4 + img{
+    height: 300px;
+    width: auto;
+    border-radius: 150px;
+}
+
+ul{
+    letter-spacing: 8px;
+    list-style-type: none;
+}
+
+#four{
+    text-align: center;
+}
