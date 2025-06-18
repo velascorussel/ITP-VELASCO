@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h2, h3, h4{
+    margin-top: 1rem;
+    margin-bottom: 1rem;    
+}
+
+#div-3{
+    background-color: rgb(0, 255, 0);
+    border: 2px solid rgb(255, 238, 0);
+    height: 200px;
+    width: 200px;
+    display: inline;
+}
+
+#div-4{
+    background-color: rgb(255, 238, 0);
+    border: 2px solid rgb(0, 255, 0);
+    height: 200px;
+    width: 200px;
+    display: inline;
+}
+
+#span-3{
+    background-color: rgb(255, 0, 0);
+    border: 2px solid rgb(0, 255, 213);
+    height: 200px;
+    width: 200px;
+    display: block;
+}
+
+#span-4{
+    background-color: rgb(0, 255, 213);
+    border: 2px solid rgb(255, 0, 0);
+    height: 200px;
+    width: 200px;
+    display: block;
+}
+
+#span-5{
+    background-color: rgb(0, 38, 255);
+    border: 2px solid rgb(255, 0, 221);
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+}
+
+#span-6{
+    background-color: rgb(255, 0, 221);
+    border: 2px solid rgb(0, 38, 255);
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+}
+
+#div-5{
+    background-color: rgb(255, 81, 0);
+    border: 2px solid rgb(140, 0, 255);
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+}
+
+#div-6{
+    background-color: rgb(140, 0, 255);
+    border: 2px solid rgb(255, 81, 0);
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+}
+
+#div-7{
+    background-color: rgb(0, 255, 0);
+    border: 2px solid rgb(72, 255, 0);
+}
+
+#div-8{
+    background-color: rgb(60, 255, 0);
+    border: 2px solid rgb(0, 255, 0);
+}
+
+#span-7{
+    background-color: rgb(51, 255, 0);
+    border: 2px solid rgb(30, 255, 0);
+}
+
+.background{
+    background-image: url(https://us1.discourse-cdn.com/spiceworks/original/4X/2/e/f/2efafa8251e02022223ac4902d7328877a769b8a.gif);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+
+.container-bg{
+    min-height: 100vh;
+    /* background-color: black; */
+}
+
+.bg-title{
+    color: white;
+    text-align: center;
+    font-size: 5rem;
+    margin: 0;
+    line-height: 35rem;
+}
+
