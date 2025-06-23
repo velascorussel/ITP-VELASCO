@@ -7,32 +7,33 @@
 }
 
 .img-float{
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     float: right;
 }
 
 .parent-element{
-    background-color: antiquewhite;
+    background-color: skyblue;
     padding: 50px 10px;
     position: relative;
     height: 800vh;
 }
 
 .child-one{
-    background-color: aqua;
+    background-color: gray;
     padding: 10px;
 }
 
 .child-two{
-    background-color: aquamarine;
+    background-color: yellow;
     padding: 10px;
     position: sticky;
     top: 10px;
+    
 }
 
 .child-three{
-    background-color: rgb(0, 107, 107);
+    background-color: gray;
     padding: 10px;
 }
 
@@ -42,23 +43,22 @@ html{
 
 .container{
     position: relative;
-
 }
 
 .black-box{
     position: relative;
-    background-color: cornflowerblue;
+    background-color: black;
     height: 100px;
     width: 300px;
     padding: 20px;
-    border: 2px solid yellowgreen;
+    border: 2px solid yellow;
     color: white;
     z-index: 3;
 }
 
 .gray-box{
     position: absolute;
-    background-color: burlywood;
+    background-color: gray;
     height: 80px;
     width: 70%;
     top: 50px;
@@ -68,10 +68,10 @@ html{
 
 .green-box{
     position: absolute;
-    background-color: rgb(112, 86, 52);
-    height: 100px;
+    background-color: lightgreen;
     width: 35%;
-    top: -15px;
+    height: 100px;
     left: 270px;
+    top: -15px;
     z-index: 2;
 }
