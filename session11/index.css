@@ -1,0 +1,8 @@
+.img-crop{
+  width: 100%; 
+  min-height: 620px;
+  max-height: 620px; 
+  object-fit: cover; 
+  object-position: 100%;
+
+}
