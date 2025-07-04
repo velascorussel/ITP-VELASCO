@@ -1,36 +1,79 @@
-/* Hero Section */
-.hero {
-  height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url('https://source.unsplash.com/1600x900/?technology,code') no-repeat center center/cover;
-}
-
-/* Section Headings */
-section h2 {
-  font-weight: 700;
-}
-
-/* Footer */
-footer {
-  font-size: 0.9rem;
-}
-
 *{
   font-family: "Trade Winds", system-ui;
   font-weight: 400;
   font-style: normal;
 }
 
-#about .carousel img {
-  max-height: 150px;
-  object-fit: contain;
-}
-
 /* Global Accent Color: Red Theme */
 :root {
   --main-red: #d62828;
   --light-red: #fcbaba;
-  --dark-red: #a4161a;
+  --dark-red: #4c0003;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--dark-red) !important;
+  animation: slideFadeDown 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+@keyframes slideFadeDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* When scrolling down */
+.navbar.scrolled {
+  background-color: var(--main-red) !important; /* Lighter red */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Nav Links */
+.navbar .nav-link {
+  color: #fff !important;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: var(--light-red);
+  box-shadow: 0 0 8px var(--main-red);
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: var(--light-red) !important;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Brand glow */
+.navbar-brand {
+  transition: text-shadow 0.3s ease;
+}
+
+.navbar-brand:hover {
+  text-shadow: 0 0 10px var(--main-red), 0 0 20px var(--main-red);
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('https://source.unsplash.com/1600x900/?technology,code') no-repeat center center/cover;
 }
 
 /* Hero Section with Red Gradient */
@@ -39,19 +82,23 @@ footer {
   background: linear-gradient(rgba(214, 40, 40, 0.7), rgba(0, 0, 0, 0.7)),
               url('https://source.unsplash.com/1600x900/?technology,red') no-repeat center center/cover;
   color: white;
+  position: relative;
+  z-index: 1;
 }
 
-/* Navbar */
-.navbar {
-  background-color: var(--dark-red) !important;
+.hero .container {
+  animation: fadeInUp 1.5s ease;
 }
 
-.navbar .nav-link {
-  color: #fff !important;
-}
-
-.navbar .nav-link:hover {
-  color: var(--light-red) !important;
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Section Headings */
@@ -60,10 +107,26 @@ section h2 {
   font-weight: 700;
 }
 
+/* Footer */
+footer {
+  font-size: 0.9rem;
+background-color: var(--dark-red);
+  color: #fff;
+}
+
+#about .carousel-inner img {
+  height: 150px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
 /* About Cards */
 #about .card {
   border-left: 5px solid var(--main-red);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUpCard 1s ease both;
 }
 
 #about .card:hover {
@@ -75,6 +138,10 @@ section h2 {
   color: var(--main-red);
   font-weight: bold;
 }
+
+/* stagger animation */
+#about .card:nth-child(1) { animation-delay: 0.2s; }
+#about .card:nth-child(2) { animation-delay: 0.4s; }
 
 #about .carousel img {
   max-height: 150px;
@@ -93,23 +160,30 @@ section h2 {
   border-color: var(--dark-red) !important;
 }
 
-/* Footer */
-footer {
-  background-color: var(--dark-red);
-  color: #fff;
-}
-
 /* Glowing border effect */
 .glow-border {
   border: 2px solid #d62828;
-  box-shadow: 0 0 10px #d62828, 0 0 20px #d62828;
-  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(214, 40, 40, 0.6), 0 0 25px rgba(214, 40, 40, 0.4);
+  transition: box-shadow 0.4s ease-in-out, transform 0.3s ease;
+  animation: glowPulse 3s ease-in-out infinite;
 }
 
 .glow-border:hover {
-  box-shadow: 0 0 15px #d62828, 0 0 25px #d62828, 0 0 40px #d62828;
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(214, 40, 40, 0.8), 0 0 40px rgba(214, 40, 40, 0.6);
 }
 
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 10px rgba(214, 40, 40, 0.4), 0 0 25px rgba(214, 40, 40, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(214, 40, 40, 0.6), 0 0 30px rgba(214, 40, 40, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(214, 40, 40, 0.4), 0 0 25px rgba(214, 40, 40, 0.2);
+  }
+}
 
 /* Smooth carousel transitions */
 .carousel-inner {
@@ -143,37 +217,41 @@ footer {
 }
 
 /* Typewriter effect */
-.typewriter {
-  width: 100%;
+.word-by-word {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  font-size: 1.2rem;
   color: #fff;
-  overflow: hidden;
-  border-right: 2px solid #fff;
-  white-space: nowrap;
-  letter-spacing: 2px;
-  animation: typing 2s steps(40, end), blink 0.50s step-end infinite;
+  text-align: center;
 }
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+.word-by-word span {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: wordFadeIn 0.6s ease forwards;
 }
 
-@keyframes blink {
-  50% { border-color: transparent; }
-}
+/* Delay each word */
+.word-by-word span:nth-child(1) { animation-delay: 0.2s; }
+.word-by-word span:nth-child(2) { animation-delay: 0.6s; }
+.word-by-word span:nth-child(3) { animation-delay: 1s; }
+.word-by-word span:nth-child(4) { animation-delay: 1.4s; }
+.word-by-word span:nth-child(5) { animation-delay: 1.8s; }
 
-.hero .container {
-  animation: fadeInUp 1.5s ease;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
+@keyframes wordFadeIn {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Smaller font on phones */
+@media (max-width: 576px) {
+  .word-by-word {
+    font-size: 1rem;
+    padding: 0 10px;
   }
 }
 
@@ -188,12 +266,6 @@ footer {
   background: #0d0d0d;
 }
 
-/* Ensure hero content stays on top */
-.hero {
-  position: relative;
-  z-index: 1;
-}
-
 #projects {
   background: #121212;
 }
@@ -206,5 +278,62 @@ footer {
 
 #projects .card:hover {
   box-shadow: 0 0 15px #d62828;
+}
+
+.animated-background-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -5;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ff2e2e;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #ff2e2e, 0 0 20px #ff2e2e;
+  opacity: 0.6;
+  animation: float 12s infinite ease-in-out;
+}
+
+.dot1 { top: 10%; left: 15%; animation-delay: 0s; }
+.dot2 { top: 40%; left: 70%; animation-delay: 3s; }
+.dot3 { top: 80%; left: 30%; animation-delay: 6s; }
+.dot4 { top: 60%; left: 50%; animation-delay: 1s; }
+.dot5 { top: 25%; left: 80%; animation-delay: 5s; }
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); opacity: 0.6; }
+  50% { transform: translateY(-20px) translateX(10px); opacity: 1; }
+  100% { transform: translateY(0) translateX(0); opacity: 0.6; }
+}
+
+/* Navbar Toggler Icon Animation */
+.animated-toggler:focus {
+  outline: none;
+}
+
+.animated-toggler.collapsed .navbar-toggler-icon {
+  transition: transform 0.3s ease;
+}
+
+.animated-toggler:not(.collapsed) .navbar-toggler-icon {
+  transform: rotate(90deg) scale(1.1);
+}
+
+@keyframes fadeInUpCard {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
