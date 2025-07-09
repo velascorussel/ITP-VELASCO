@@ -4,7 +4,7 @@ import Feature from "../components/Feature"
 
 export default function Home(){
     return(
-        <Container fluid className="vh-100 p-4 bg-secondary">
+        <Container fluid className="p-4 bg-secondary">
             <Banner/>
             <Feature/>
         </Container>
