@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "2dd1e0e0-ce1b-48bc-b730-82c626148376",
+		"name": "S13",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24211426",
+		"_collection_link": "https://cloudy-flare-575514.postman.co/workspace/SUMMER~afce991a-8017-49d8-a477-c70eb3660ac6/collection/24211426-2dd1e0e0-ce1b-48bc-b730-82c626148376?action=share&source=collection_link&creator=24211426"
+	},
+	"item": [
+		{
+			"name": "GET ALL TASKS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/tasks/all",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD TASK",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"taskName\" : \"Practice Coding\",\r\n    \"taskDescription\" : \"Do not forget to practice SQL and JavaScript.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/tasks/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET SPECIFIC TASK",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/tasks/5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "COMPLETE TASK",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/tasks/complete/5",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks",
+						"complete",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE TASK",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/tasks/delete/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tasks",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
