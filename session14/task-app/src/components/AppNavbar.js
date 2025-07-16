@@ -3,7 +3,7 @@
 // import Navbar from 'react-bootstrap/Navbar';
 
 import {Container, Nav, Navbar, Button} from 'react-bootstrap';
-import { Link, NavLink} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 export default function AppNavbar(){
@@ -16,7 +16,7 @@ export default function AppNavbar(){
             <Nav className="ms-auto">
                 <Nav.Link as={Link} to="/">Home</Nav.Link>
                 <Nav.Link as={Link} to="/register">Register</Nav.Link>
-                <Button className='rounded-pill px-5' variant='outline-primary' as={NavLink} to="/login">Login</Button>
+                <Button className='rounded-pill px-5' variant='outline-primary' as={Link} to="/login">Login</Button>
             </Nav>
             </Navbar.Collapse>
         </Container>
